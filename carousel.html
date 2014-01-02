@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+   Author	: Christopher Padavick
+   Website : http://www.christopherpadavick.com/
+   Email : cpadavick@christopherpadavick.com
+   License : MIT License / GPL License
+  -->  
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+<!--[if IE 8]>
+<link href="css/ie8.css" rel="stylesheet" type="text/css" />
+<![endif]-->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title></title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+<!--[if lt IE 7]>
+            <p class="chromeframe">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">activate Google Chrome Frame</a> to improve your experience.</p>
+        <![endif]-->
+
+<div class="container container-fluid row-fluid">
+
+<!-- Main hero unit for a primary marketing message or call to action -->
+<div class="hero-unit"> 
+	<!-- Start Small Responsive Nav -->
+	
+<div id="myCarousel"> 
+	<!-- Start All Carousel items --> 
+	
+	<!-- Start Carousel Item 1 -->
+	<div class="aui-carousel-item"> <img src="img/img-1.jpg" alt="Image 1">
+		
+	</div>
+	<!-- End Carousel Item 1 --> 
+	
+	<!-- Start Carousel Items 2 -->
+	<div class="aui-carousel-item"> <img src="img/img-2.jpg" alt="Image 2">
+		
+	</div>
+	<!-- End Carousel Item 2 --> 
+	
+	<!-- Start Carousel Item 3 -->
+	<div class="aui-carousel-item"> <img src="img/img-3.jpg" alt="Image 3">
+		
+	</div>
+	<!-- End Carousel Item 3 --> 
+	
+	<!-- Start Carousel Item 4 -->
+	<div class="aui-carousel-item"> <img src="img/img-4.jpg" alt="Image 4">
+		
+	</div>
+	<!-- End Carousel Item 4 --> 
+</div>
+<!-- End All Carousel items -->
+
+
+<script src="http://cdn.alloyui.com/2.0.0pr5/aui/aui-min.js"></script>
+<script>
+YUI().use('aui-carousel', function (Y) {
+	new Y.Carousel({
+		activeIndex: 'rand',
+		contentBox: '#myCarousel',
+		height: 1024,
+		intervalTime: 10,
+		width: 1900
+	}).render();
+});
+</script>
+<script>
+YUI().use('node', function (Y) {
+	Y.all('#myCarousel menu li').item(1).addClass('c_prev');
+	Y.all('#myCarousel menu li:last-child').addClass('c_next');
+	
+	Y.all('#myCarousel menu li').item(2).addClass('c_one');
+	Y.all('#myCarousel menu li').item(3).addClass('c_two');
+	Y.all('#myCarousel menu li').item(4).addClass('c_three');
+	Y.all('#myCarousel menu li').item(5).addClass('c_four');
+});
+</script>
+</body>
+</html>
